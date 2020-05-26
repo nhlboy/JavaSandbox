@@ -1,0 +1,18 @@
+INDEX VERSION 1.131+/Users/kirill/Java/.metadata/.plugins/org.eclipse.jdt.core
+1084537403.index
+3045504833.index
+117752043.index
+818826932.index
+3999753694.index
+1558516340.index
+3057047579.index
+3263268823.index
+1997371889.index
+1858850571.index
+736240354.index
+1535694445.index
+2003711076.index
+3737137048.index
+676482488.index
+2848399118.index
+2573227336.index

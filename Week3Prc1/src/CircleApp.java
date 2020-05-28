@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class CircleApp {
+
+    public static void main(String[] args) {
+//        // TODO Auto-generated method stub
+//        Circle c1 = new Circle();
+//        System.out.println("c1's radius is " + c1.radius);
+//        System.out.println("c1's color is " + c1.color);
+//        Circle c2 = new Circle(10);
+//        System.out.println("c2's radius is " + c2.radius);
+//        System.out.println("c2's color is " + c2.color);
+//        c2.color = "Blue";
+//        System.out.println("c2's color changed to " + Circle.color);
+//        System.out.println(Circle.color);
+//         c2.setRadius(20);
+//         System.out.print("c2's radius is changed to " +c2.radius);
+//         double a = c2.getArea();
+//         System.out.print("c2's aea is" + a);
+        Scanner input = new Scanner(System.in);
+        System.out.print("Please enter radius of your circle: ");
+        double r = input.nextDouble();
+        Circle c3 = new Circle(r);
+        System.out.println("c3's radius is " + c3.radius);
+
+//        Scanner input = new Scanner(System.in);
+//        System.out.print("Please enter an integer number: ");
+//        int n = input.nextInt();
+//        int radius = Circle.squareFn(n);
+//        System.out.println(n + "^2 = " +square);
+    }
+}

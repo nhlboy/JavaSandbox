@@ -4,92 +4,82 @@ public class Main {
 
     public static void main(String[] args) {
 
-        numberToWords(100);
+        //numberToWords(234);
+//        numberToWords(1000);
+//        System.out.println(reverse(4567));
+//        numberToWords(123);
+//        System.out.println(getDigitCount(0001));
 
     }
 
     public static void numberToWords(int number) {
+
         if (number < 0) {
             System.out.println("Invalid Value");
         }
 
+        int lastDigit;
         int tempNumber = reverse(number);
-        if (tempNumber == 0) {
-            System.out.println("Zero");
-        }
-
-        while (tempNumber > 0) {
-            int lastNumber = tempNumber % 10;
-            switch (lastNumber) {
+        while (tempNumber != 0) {
+            lastDigit = tempNumber % 10;
+            switch (lastDigit) {
                 case 0:
-                    System.out.println("Zero");
+                    System.out.print("Zero ");
                     break;
                 case 1:
-                    System.out.println("One");
+                    System.out.print("One ");
                     break;
                 case 2:
-                    System.out.println("Two");
+                    System.out.print("Two ");
                     break;
                 case 3:
-                    System.out.println("Three");
+                    System.out.print("Three ");
                     break;
                 case 4:
-                    System.out.println("Four");
+                    System.out.print("Four ");
                     break;
                 case 5:
-                    System.out.println("Five");
+                    System.out.print("Five ");
                     break;
                 case 6:
-                    System.out.println("Six");
+                    System.out.print("Six ");
                     break;
                 case 7:
-                    System.out.println("Seven");
+                    System.out.print("Seven ");
                     break;
                 case 8:
-                    System.out.println("Eight");
+                    System.out.print("Eight ");
                     break;
                 case 9:
-                    System.out.println("Nine");
+                    System.out.print("Nine ");
                     break;
             }
             tempNumber /= 10;
-
-        }
-        int numberDigits = getDigitCount(number);
-        int zero = getDigitCount(reverse(number));
-
-        for (int i = zero; i < numberDigits; i++) {
-            System.out.println("Zero");
         }
     }
 
-    public static int reverse(int number) {
-        int reversedNo = 0;
-
+    public static int reverse(int number) { // 12 3
+        int reverse = 0;
+        int lastDigit = 0;
         while (number != 0) {
-            reversedNo *= 10;
-            reversedNo += number % 10;
+            lastDigit = number % 10;
+            reverse *= 10;
+            reverse += lastDigit;
             number /= 10;
         }
-        return reversedNo;
+        return reverse;
     }
 
     public static int getDigitCount(int number) {
-        if (number < 0) {
-            return -1;
-        } else if (number == 0) {
-            return 1;
-        }
-
         int count = 0;
-
-        while (number > 0) {
-            count++;
+        while(number != 0) {
             number /= 10;
+            count++;
         }
         return count;
     }
 }
+
 
 
 // Write a method called numberToWords with one int parameter named number.
@@ -98,7 +88,7 @@ public class Main {
 //
 // If the number is negative, print "Invalid Value".
 //
-// To print the number as words, follow these steps:
+// To print the number as words, follow these logic:
 
 // 1. Extract the last digit of the given number using the remainder operator.
 // 2. Convert the value of the digit found in Step 1 into a word. There are 10
@@ -162,7 +152,11 @@ public class Main {
 // * numberToWords(-12); should print "Invalid Value" since the parameter is negative.
 //
 //
-// HINT: Use a for loop to print zeroes after reversing the number. As seen in a previous example, 100 reversed becomes 1, but the method numberToWords should print "One Zero Zero". To get the number of zeroes, check the difference between the digit count from the original number and the reversed number.
+// HINT: Use a for loop to print zeroes after reversing the number.
+// As seen in a previous example, 100 reversed becomes 1, but the method
+// numberToWords should print "One Zero Zero". To get the number of zeroes,
+// check the difference between the digit count from the original number and
+// the reversed number.
 //
 // NOTE: When printing words, each word can be in its own line. For example, numberToWords(123); can be:
 //
@@ -172,7 +166,7 @@ public class Main {
 //
 // They don't have to be separated by a space.
 //
-// NOTE: The methods numberToWords, getDigitCount, reverse should be defined as public static like we have been doing so far in the course.
+// NOTE: The methods numberToWords, getDigitCount, reverse should be defined as public static.
 // NOTE: In total, you have to write 3 methods.
 //
 // NOTE: Do not add a main method to the solution code.

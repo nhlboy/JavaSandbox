@@ -2,6 +2,7 @@ package com.company;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.Arrays;
 
 /*
 Числа по возрастанию
@@ -11,9 +12,20 @@ public class Solution {
     public static void main(String[] args) throws Exception {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-        //напишите тут ваш код
+        int[] myArray = new int[5];
+
+        for (int i = 0; i < myArray.length; i++) {
+            myArray[i] = Integer.parseInt(reader.readLine());
+        }
+        Arrays.sort(myArray);
+
+        for (int j = 0; j < 5; j++) {
+            System.out.println(myArray[j]);
+        }
     }
 }
+
+
 
 // Задача: Написать программу, которая вводит с клавиатуры 5 чисел и выводит их в возрастающем порядке.
 

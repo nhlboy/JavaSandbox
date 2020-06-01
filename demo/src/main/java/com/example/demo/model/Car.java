@@ -16,11 +16,11 @@ import javax.persistence.*;
 public class Car {
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
-@Column(name = "ID")
+
     private int id;
-@Column(name = "NAME")
+
     private String name;
-@Column(name = "MODEL")
+
     private String model;
 
 }

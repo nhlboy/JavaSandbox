@@ -9,7 +9,10 @@ import java.util.List;
 @Repository
 
 public interface CarRepository extends CrudRepository<Car, Integer> {
-public List<Car> findAllByName(String name);
+    public List<Car> findAllByNameAndModel(String name, String model);
 
+    public List<Car> findByName(String name);
 
+    public List<Car> findTop3ByAge();
 }
+

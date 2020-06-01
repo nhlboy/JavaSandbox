@@ -2,53 +2,46 @@ package com.company;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 
-/*
-Числа по возрастанию
-*/
 
 public class Solution {
     public static void main(String[] args) throws Exception {
+
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        String[] strings = new String[10];
 
-        int[] myArray = new int[5];
+        for (int i = 0; i < 8; i++) {
+//            String s = reader.readLine();
+            strings[i] = reader.readLine();
 
-        for (int i = 0; i < myArray.length; i++) {
-            myArray[i] = Integer.parseInt(reader.readLine());
+//            System.out.println(Arrays.toString(strings));
+//            for (int s = 0; s < strings.length; s++)
+
         }
-        Arrays.sort(myArray);
+        for(int x = 9; x >= 0; x--)
+            System.out.println(strings[x]);
+//        System.out.println(strings[7]);
+//        System.out.println(strings[6]);
+//        System.out.println(strings[5]);
+//        System.out.println(strings[4]);
+//        System.out.println(strings[3]);
+//        System.out.println(strings[2]);
+//        System.out.println(strings[1]);
+//        System.out.println(strings[0]);
 
-        for (int j = 0; j < 5; j++) {
-            System.out.println(myArray[j]);
-        }
     }
 }
 
-
-
-// Задача: Написать программу, которая вводит с клавиатуры 5 чисел и выводит их в возрастающем порядке.
-
-// Пример ввода:
-// 3
-// 2
-// 15
-// 6
-// 17
-
-// Пример вывода:
-// 2
-// 3
-// 6
-// 15
-// 17
+// 1. Создать массив на 10 строк.
+// 2. Ввести с клавиатуры 8 строк и сохранить их в массив.
+// 3. Вывести содержимое всего массива (10 элементов) на экран в обратном порядке. Каждый элемент - с новой строки.
 // Требования:
 
 //     •
-//     Программа должна считывать 5 чисел с клавиатуры.
+//     Программа должна создавать массив на 10 строк.
 //     •
-//     Программа должна выводить 5 чисел, каждое с новой строки.
+//     Программа должна считывать 8 строк для массива с клавиатуры.
 //     •
-//     Выведенные числа должны быть отсортированы по возрастанию.
+//     Программа должна выводить на экран 10 строк, каждую с новой строки.
 //     •
-//     Вывод должен содержать те же числа, что и были введены (порядок не важен).
+//     Программа должна выводить на экран массив (10 элементов) в обратном порядке.

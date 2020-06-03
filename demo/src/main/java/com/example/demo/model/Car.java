@@ -10,17 +10,17 @@ import javax.persistence.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-@Entity
 @Table(name = "cars")
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@Entity
+@DiscriminatorColumn(discriminatorType = DiscriminatorType.STRING, name = "Car_Type")
 
 public class Car {
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     private int id;
-
     private String name;
-
     private String model;
 
 }

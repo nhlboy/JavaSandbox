@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.jar.JarOutputStream;
 
 public class Main {
 
@@ -26,7 +27,10 @@ public class Main {
     }
 
     public static void printArray() {
-        System.out.println("Original array is: " + Arrays.toString(myArray));
+        for(int i = 0; i < myArray.length; i++) {
+            System.out.println("Element " + i + " contents " + myArray[i]);
+        }
+//        System.out.println("Original array is: " + Arrays.toString(myArray));
     }
 
 

@@ -6,6 +6,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Data
 @Entity
@@ -24,4 +26,12 @@ public class Truck {
     @JsonIgnore
     private TruckingCompany truckingCompany;
 
+    @OneToMany(mappedBy = "truck")
+
+    private List<Driver> drivers = new ArrayList<>();
+
+    public List<Driver> addToDriverList (Driver driver) {
+        this.drivers.add(driver);
+        return drivers;
+    }
 }

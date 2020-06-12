@@ -9,26 +9,19 @@ import java.util.ArrayList;
 */
 
 public class Solution {
-    private static ArrayList<String> strings;
+
+    private static ArrayList<String> strings = new ArrayList<String>();;
 
     public static void main(String[] args) throws Exception {
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-        ArrayList<String> listStrings = new ArrayList<String>();
         for (int i = 0; i < 5; i++)
         {
             String s = reader.readLine();
-            listStrings.add(s);
+            strings.add(s);
         }
-
-        ArrayList<Integer> stringsLenght = new ArrayList<Integer>();
-        for (String item : strings) {
-            stringsLenght.add(item.length());//add length to list
-        }
-        System.out.println(stringsLenght);
-
-
+        
     }
 }
 

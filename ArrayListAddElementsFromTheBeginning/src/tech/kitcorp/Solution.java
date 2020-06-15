@@ -19,7 +19,6 @@ public class Solution {
         for (int i = 0; i < 10; i++) {
             String s = reader.readLine();
             listNames.add(0, s);
-
         }
 
         for(int j = 0; j < 10; j++) {

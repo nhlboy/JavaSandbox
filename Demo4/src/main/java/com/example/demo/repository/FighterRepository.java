@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 
-public interface FighterRepository extends CrudRepository<Fighter,Integer> {
+public interface FighterRepository extends CrudRepository<Fighter, Integer> {
 }

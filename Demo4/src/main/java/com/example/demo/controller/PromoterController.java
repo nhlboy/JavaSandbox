@@ -5,7 +5,7 @@ import com.example.demo.repository.PromoterRepository;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping ("/api/promoter")
+@RequestMapping("/api/promoter")
 public class PromoterController {
     private PromoterRepository promoterRepository;
 

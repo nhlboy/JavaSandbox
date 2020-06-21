@@ -28,13 +28,17 @@ public class Solution {
                 }
                 if (x % 2 == 0) {
                     moduloTwoList.add(x);
-                } else {
+                }
+                if (x % 3 != 0 && x % 2 != 0) {
                     allTheRestList.add(x);
                 }
             }
 
+        System.out.println("Modulo 3 list:");
         printList(moduloThreeList);
+        System.out.println("Modulo 2 list:");
         printList(moduloTwoList);
+        System.out.println("all the rest:");
         printList(allTheRestList);
 
 
